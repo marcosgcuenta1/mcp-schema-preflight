@@ -1,0 +1,16 @@
+{
+  "tools": [
+    {
+      "name": "demo_lookup_items",
+      "description": "Artificial sample: return local labels for numeric IDs. No MCP connection or remote data.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ids[]": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1, "maxItems": 20}
+        },
+        "required": ["ids[]"],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

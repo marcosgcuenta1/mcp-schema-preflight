@@ -1,0 +1,7 @@
+{
+  "tools": [
+    {"name": "artificial_non_object", "inputSchema": {"type": "array", "items": {"type": "string"}}},
+    {"name": "artificial_root_oneof", "inputSchema": {"type": "object", "properties": {"id": {"type": "integer"}, "slug": {"type": "string"}}, "oneOf": [{"required": ["id"]}, {"required": ["slug"]}]}},
+    {"name": "artificial_root_anyof", "inputSchema": {"type": "object", "anyOf": [{"required": ["a"]}, {"required": ["b"]}]}}
+  ]
+}

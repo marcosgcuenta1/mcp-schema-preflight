@@ -1,0 +1,15 @@
+{
+  "sample": "Artificial local fixture, not a customer repair",
+  "source": "fixtures/before.json",
+  "target": "fixtures/after.json",
+  "auto_applied": false,
+  "contract_change": true,
+  "requires": ["Update the actual handler argument lookup from ids[] to ids", "Update callers and argument-producing client instructions", "Run target-client integration tests separately"],
+  "json_patch": [
+    {"op": "move", "from": "/tools/0/inputSchema/properties/ids[]", "path": "/tools/0/inputSchema/properties/ids"},
+    {"op": "replace", "path": "/tools/0/inputSchema/required/0", "value": "ids"}
+  ],
+  "handler_before": "handler-demo.js:before",
+  "handler_after": "handler-demo.js:after",
+  "equivalence_test": "tests.js compares order, duplicate IDs and output with both names; this is a local handler test, not MCP client compatibility."
+}

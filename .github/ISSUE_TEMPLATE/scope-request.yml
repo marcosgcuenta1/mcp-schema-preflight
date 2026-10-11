@@ -1,0 +1,35 @@
+name: Public scope request
+description: Assess one reproducible schema/handler mismatch before agreeing any work.
+title: "Scope request: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public issue. Do not include secrets, credentials, personal data or private code. This AI-assisted pilot covers one mismatch in a public Node.js MCP repository. Opening an issue does not accept an engagement. Scope and payment method must be agreed before work begins.
+  - type: input
+    id: repository
+    attributes:
+      label: Public repository URL
+      description: Link to the affected public code and revision, if known.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Commands, environment and steps needed to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Fictional or anonymized sample
+      description: Include only a minimal schema and matching handler excerpt you may share publicly.
+    validations:
+      required: true
